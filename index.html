@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>My animated card</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <style>
+      body{
+
+        background: #1488cc;
+        background: linear-gradient(to left, #283593, #1976d2);
+      }
+      #credit-card{
+        height: 270px;
+        width: 450px;
+        background: hsla(0, 0%, 100%, 0.2);
+        backdrop-filter:blur(30px);
+      }    
+      #circle-1{
+        width: 180px;
+        height: 180px;
+        top: -50px;
+        left: -60px;
+        background: radial-gradient(#006db3, #29b6f6);
+      } 
+      #circle-2{
+        width: 200px;
+        height: 200px;
+        bottom: -90px;
+        right: -90px;
+        background: radial-gradient(#006db3, #29b6f6);
+      } 
+      #logo-visa{
+        width: 80px;
+      }
+      #chip{
+        width: 50px;
+      }
+      #rings{
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: transparent;
+        border: 50px solid rgba(255, 255, 255, 0.1);
+        bottom: -250px;
+        right: -250px;
+        box-sizing: border-box;
+      }
+       #rings::after {
+        content: "";
+        position: absolute;
+        height: 600px;
+        width: 600px;
+        border-radius: 50%;
+        background: transparent;
+        border: 30px solid rgba(255, 255, 255, 0.1);
+        bottom: -80px;
+        right: -110px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+      <div class=" vh-100 d-flex justify-content-center align-items-center">
+         <div class="position-relative">
+           <!-- Circles -->
+           <div id="circle-1" class="position-absolute rounded-circle opacity-80"></div>
+           <div id="circle-2" class="position-absolute rounded-circle opacity-80"></div>
+           <!-- Circles end -->
+           <!-- Credit card-->
+           <div id="credit-card" class="shadow-4 rounded-9 overflow-hidden"data-tilt>
+             <div class="p-5">
+             <!-- content -->
+             <div class="text-white ls-widest opacity-80 fw-light">
+               <div class="text-end mb-5">
+                 <img id="logo-visa" src="visa.png">
+               </div>
+               <img id="chip" class="mb-4" src="chip.png">
+               <h5 class="mb-3">1234 5678 9012 3456</h5>
+               <div class="d-flex justify-content-between">
+                 <p>Godswill Uchechi</p>
+                 <p>12/25</p>
+               </div>
+             </div>
+             <!-- content-end  -->                   
+             </div>
+             <div id="rings" class="position-absolute"></div>
+           </div>    
+           <!-- Credit card-->
+         </div>
+      </div>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>
